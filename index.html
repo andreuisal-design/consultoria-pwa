@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1769f5">
+  <meta name="description" content="Plataforma de consultoria — entrevista i presa de requeriments">
+  <title>Consultoria · Entrevista inicial</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">⌁</div>
+      <div><strong>Consultoria</strong><span>Diagnòstic i optimització empresarial</span></div>
+    </div>
+    <div class="top-actions">
+      <span id="saveState" class="save-state">Desat localment</span>
+      <button class="icon-btn" id="menuBtn" aria-label="Obrir menú">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PLATAFORMA DE CONSULTORIA · V1.0</p>
+        <h1>Entenem el negoci.<br>Detectem oportunitats.</h1>
+        <p>Entrevista inicial i presa de requeriments per preparar el diagnòstic de l'edifici d'apartaments.</p>
+      </div>
+      <div class="hero-side">
+        <div class="pilot-chip"><span class="dot"></span> PILOT 01 · APARTAMENTS</div>
+        <div class="hero-note">Entrevista guiada<br><b>Desada al dispositiu</b></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card"><div class="stat-icon blue">▤</div><div><strong id="progressValue">0%</strong><span>Entrevista completada</span><small>Per camps informats</small></div></article>
+      <article class="stat-card"><div class="stat-icon green">✓</div><div><strong id="docsValue">0 / 8</strong><span>Documents disponibles</span><small>Documentació del client</small></div></article>
+      <article class="stat-card"><div class="stat-icon amber">⌂</div><div><strong>7</strong><span>Àrees d'anàlisi</span><small>Edifici i gestió</small></div></article>
+      <article class="stat-card"><div class="stat-icon violet">⇧</div><div><strong id="pendingValue">0</strong><span>Temes pendents</span><small>Per revisar després</small></div></article>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar card">
+        <div class="side-title">ENTREVISTA</div>
+        <nav id="sectionNav">
+          <button class="nav-item active" data-section="identity"><span>01</span> Dades generals</button>
+          <button class="nav-item" data-section="building"><span>02</span> Edifici i instal·lacions</button>
+          <button class="nav-item" data-section="supplies"><span>03</span> Subministraments</button>
+          <button class="nav-item" data-section="contracts"><span>04</span> Contractes i proveïdors</button>
+          <button class="nav-item" data-section="maintenance"><span>05</span> Manteniment i incidències</button>
+          <button class="nav-item" data-section="costs"><span>06</span> Despeses i gestió</button>
+          <button class="nav-item" data-section="objectives"><span>07</span> Objectius i observacions</button>
+          <button class="nav-item" data-section="documents"><span>08</span> Documents</button>
+        </nav>
+        <div class="side-foot">
+          <div class="offline"><span class="green-dot"></span> Mode local disponible</div>
+          <p>Les dades es desen en aquest dispositiu. Exporta una còpia de seguretat en acabar.</p>
+        </div>
+      </aside>
+
+      <section class="main-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow" id="sectionKicker">FASE 01 · ENTREVISTA</p><h2 id="sectionTitle">Dades generals</h2><p id="sectionDesc">Identificació del client i de les persones responsables.</p></div>
+          <div class="heading-actions"><button class="btn btn-light" id="exportBtn">⇩ Exportar dades</button><button class="btn btn-primary" id="printBtn">Generar resum</button></div>
+        </div>
+        <div id="formContent" class="form-content"></div>
+        <div class="form-footer"><span id="sectionCounter">Apartat 1 de 8</span><div><button class="btn btn-light" id="prevBtn">Anterior</button><button class="btn btn-primary" id="nextBtn">Següent apartat →</button></div></div>
+      </section>
+    </div>
+
+    <section class="bottom-tip"><div class="tip-icon">i</div><div><b>Criteri de treball</b><p>Durant l'entrevista registra el que explica el client. Marca com a documentat o validat només allò que hàgim pogut comprovar amb documents o evidències.</p></div></section>
+    <footer>CONSULTORIA · EINA DE TREBALL INTERNA <span>Versió 0.1 · Pilot apartaments</span></footer>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

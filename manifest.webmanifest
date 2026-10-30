@@ -1,0 +1,18 @@
+{
+  "name": "Consultoria · Entrevista inicial",
+  "short_name": "Consultoria",
+  "description": "Presa de requeriments i diagnòstic d'edificis",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#1769f5",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
